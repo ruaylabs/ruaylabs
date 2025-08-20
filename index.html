@@ -1,103 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ruaylabs</title>
-	<link rel="stylesheet" href="styles.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preconnect" href="./styles.css" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<script defer data-domain="ruaylabs.com" src="https://plausible.io/js/script.js"></script>
-    </head>
-    <body>
-	<header>
-	    <div class="container">
-		<div class="logo">
-		    <h1>Ruay<span>labs</span></h1>
-		</div>
-		<nav>
-		    <ul>
-			<li><a href="#about">About</a></li>
-		    </ul>
-		</nav>
-		<div class="mobile-menu-btn">
-		    <span></span>
-		    <span></span>
-		    <span></span>
-		</div>
-	    </div>
-	</header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruaylabs</title>
+    <style>
+      body {
+        font-family: 'Courier New', Courier, monospace;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+        background-color: #f8f8f8;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      body.dark-mode {
+        color: #ddd;
+        background-color: #1a1a1a;
+      }
+      .wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      nav {
+        margin-bottom: 2em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav a {
+        margin-right: 1em;
+        color: #0066cc;
+        text-decoration: none;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      body.dark-mode nav a {
+        color: #66b3ff;
+      }
+      .theme-toggle {
+        background: none;
+        border: none;
+        font-family: inherit;
+        font-size: 1em;
+        color: #0066cc;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .theme-toggle:hover {
+        text-decoration: underline;
+      }
+      body.dark-mode .theme-toggle {
+        color: #66b3ff;
+      }
+      h1, h2 {
+        color: #222;
+        font-weight: 600;
+      }
+      body.dark-mode h1, body.dark-mode h2 {
+        color: #eee;
+      }
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+      }
+      h2 {
+        font-size: 1.5em;
+        margin-top: 2em;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0.3em;
+      }
+      body.dark-mode h2 {
+        border-bottom: 1px solid #444;
+      }
+      p, li {
+        font-size: 1.1em;
+        margin-bottom: 1em;
+      }
+      a {
+        color: #0066cc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      body.dark-mode a {
+        color: #66b3ff;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 0.5em;
+      }
+      .section {
+        margin-bottom: 3em;
+      }
+      footer {
+        margin-top: 3em;
+        font-size: 0.9em;
+        color: #666;
+        text-align: center;
+      }
+      body.dark-mode footer {
+        color: #999;
+      }
+    </style>
+    <script defer data-domain="ruaylabs.com" src="https://plausible.io/js/script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <div>
+          <a href="#home">Home</a>
+          <a href="#products">Products</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+      </nav>
 
-	<section class="hero">
-            <div class="container">
-		<div class="hero-content">
-                    <h2>Products and services to fix actual problems</h2>
-                    <p>We develop cutting-edge software products that help businesses streamline operations, increase productivity, and drive growth.</p>
-                    <div class="cta-buttons">
-			<a href="mailto:hello@ruaylabs.com" class="btn secondary">Get in Touch</a>
-                    </div>
-		</div>
-		<div class="hero-image">
-                    <img src="/images/about-us.webp" alt="Software dashboard illustration">
-		</div>
-            </div>
-	</section>
+      <h1 id="home">Ruaylabs</h1>
 
-	<section id="about" class="about">
-            <div class="container">
-		<div class="about-content">
-                    <h2>About Ruaylabs</h2>
-                    <p>Founded in 2025, Ruaylabs is focused in build products for companies and end users. Also doing consulting and on demand development</p>
-		</div>
-		<div class="about-image">
-		</div>
-            </div>
-	</section>
+      <div class="section" id="products">
+        <h2>Products and Services</h2>
+        <p>
+          We develop cutting-edge software products that help businesses streamline operations,
+          increase productivity, and drive growth.
+        </p>
+      </div>
 
-	<footer>
-            <div class="container">
-		<div class="footer-content">
-                    <div class="footer-logo">
-			<h2>Ruay<span>Labs</span></h2>
-			<p>Products and services to fix actual problems</p>
-                    </div>
-                    <div class="footer-links">
-			<div class="link-group">
-                            <h3>Company</h3>
-                            <ul>
-				<li><a href="#about">About Us</a></li>
-                            </ul>
-			</div>
-                    </div>
-		</div>
-		<div class="footer-bottom">
-                    <p>&copy; 2025 Ruaylabs. All rights reserved.</p>
-                    <div class="social-links">
-			<a href="https://twitter.com/ruaylabs" target="blank" aria-label="Twitter">Twitter</a>
-			<a href="https://github.com/ruaylabs" target="blank" aria-label="GitHub">GitHub</a>
-                    </div>
-		</div>
-            </div>
-	</footer>
+      <div class="section" id="about">
+        <h2>About Ruaylabs</h2>
+        <p>
+          Founded in 2025, Ruaylabs is focused on building products for companies and end users.
+          We also provide consulting and on-demand development services.
+        </p>
+      </div>
 
-	<script>
-         // Simple mobile menu toggle
-         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-             document.querySelector('nav').classList.toggle('active');
-             this.classList.toggle('active');
-         });
+      <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>
+          Have a project in mind or want to learn more about our services? Get in touch with us
+          to discuss how we can help your business thrive.
+        </p>
+        <p>
+          <a href="mailto:hello@ruaylabs.com">Reach out</a> for inquiries.
+        </p>
+      </div>
 
-         // Smooth scrolling for anchor links
-         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-             anchor.addEventListener('click', function(e) {
-                 e.preventDefault();
-                 document.querySelector(this.getAttribute('href')).scrollIntoView({
-                     behavior: 'smooth'
-                 });
-             });
-         });
-	</script>
-    </body>
+      <footer>
+        &copy; 2025 Ruaylabs. All rights reserved.
+        <a href="mailto:hello@ruaylabs.com">Contact</a> |
+        <a href="https://github.com/ruaylabs">GitHub</a> |
+        <a href="https://twitter.com/ruaylabs">Twitter</a>
+      </footer>
+    </div>
+
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+      }
+
+      // Load theme based on saved preference or system preference
+      function loadTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          document.body.classList.toggle('dark-mode', savedTheme === 'dark');
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark-mode');
+        }
+      }
+
+      // Run theme detection on page load
+      loadTheme();
+
+      // Listen for changes in system theme preference
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        document.body.classList.toggle('dark-mode', e.matches);
+      });
+    </script>
+  </body>
 </html>
